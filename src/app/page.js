@@ -12,9 +12,13 @@ export default function Home() {
       <Navbar />
       <div className="container mt-24 mx-auto px-12 py-4">
         <HeroSection />
+        <hr className="divider" />
         {/* <AchievementsSection /> */}
         <AboutSection />
+        <hr className="project-divider divider" />
         <ProjectsSection />
+        <br />
+        <hr className="divider" />
         <EmailSection />
       </div>
       <Footer />

@@ -28,12 +28,55 @@ body {
 }
 
 .custom-container {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.custom-container {
   max-width: 1400px;
   margin: auto;
+}
+
+nav {
+  z-index: 20;
+}
+
+.blur-design {
+  z-index: 1;
+}
+
+#about {
+  text-align: -webkit-center;
+}
+.container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.divider {
+  background: #292929;
+  border: none;
+  border-radius: 5px;
+  padding: 1px;
+  margin: 35px auto;
+}
+
+.email input, textarea{
+  background: transparent !important; 
 }
 
 @media (max-width: 640px) {
   .hero-heading {
     margin: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .divider {
+    margin-top: 80px;
+  }
+  .project-divider{
+    margin-top: 10px !important;
+    margin-bottom: 40px !important;
   }
 }
