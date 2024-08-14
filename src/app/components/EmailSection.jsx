@@ -54,7 +54,7 @@ const EmailSection = () => {
           open. Whether you have a question or just want to say hi, I&apos;ll
           try my best to get back to you!
         </p>
-        <div className="socials flex flex-row gap-2">
+        <div className="socials mb-5 flex flex-row gap-2">
           <a href="https://github.com/GobindSinghDhanjal">
             <Image style={{marginRight:12}} src={GithubIcon} alt="Github Icon" />
           </a>
