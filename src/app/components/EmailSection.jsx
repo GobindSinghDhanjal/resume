@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
-import LinkedinIcon from "../../../public/linkedin-icon.svg";
-import Link from "next/link";
+import WhatsAppIcon from "../../../public/whatsapp-icon.svg";
 import Image from "next/image";
 
 const EmailSection = () => {
@@ -56,12 +55,12 @@ const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com/GobindSinghDhanjal">
-            <Image src={GithubIcon} alt="Github Icon" />
-          </Link>
-          <Link href="https://api.whatsapp.com/qr/E2RZP7L2UCLKI1">
-            <Image src={LinkedinIcon} alt="whatsapp" />
-          </Link>
+          <a href="https://github.com/GobindSinghDhanjal">
+            <Image style={{marginRight:12}} src={GithubIcon} alt="Github Icon" />
+          </a>
+          <a href="https://wa.me/9953929943">
+            <Image src={WhatsAppIcon} alt="whatsapp" />
+          </a>
         </div>
       </div>
       <div className="z-10">
