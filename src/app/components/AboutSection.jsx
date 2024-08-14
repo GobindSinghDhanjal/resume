@@ -2,6 +2,7 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import { motion } from "framer-motion"
 
 const TAB_DATA = [
   {
@@ -76,6 +77,16 @@ const AboutSection = () => {
 
   return (
     <section className="text-white" id="about">
+    <motion.div
+      initial="hidden"
+      transition={{ ease: "easeOut", duration: 0.6 }}
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 50 }
+      }}
+    >
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 xl:gap-16 sm:py-16">
         <Image src="/images/about-image.png" width={800} height={800} alt="about image" style={{ borderRadius: '20px' }}/>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
@@ -116,6 +127,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
+      </motion.div>
     </section>
   );
 };

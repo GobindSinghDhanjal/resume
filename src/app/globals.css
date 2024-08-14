@@ -64,7 +64,19 @@ nav {
   background: transparent !important; 
 }
 
+#about,#projects,#contact{
+  padding-top: 80px;
+  margin-top: -80px;
+}
+
 @media (max-width: 640px) {
+
+  .hero-btn{
+    width: 250px;
+    margin: auto;
+    display: block;
+    margin-bottom: 12px;
+  }
   .custom-container {
     padding: 5px 28px;
   }

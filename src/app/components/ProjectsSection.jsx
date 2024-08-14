@@ -9,7 +9,7 @@ const projectsData = [
     id: 1,
     title: "MegaCart",
     description: "Your go-to electronics eCommerce site for a vast selection of gadgets and tech essentials.",
-    image: "/images/projects/1.png",
+    image: "/images/projects/7.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/GobindSinghDhanjal/megacart3",
     previewUrl: "https://megacart.pythonanywhere.com/",

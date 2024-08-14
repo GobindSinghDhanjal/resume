@@ -19,7 +19,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
       <div
         className="relative group rounded-t-xl"
         style={{
-          paddingTop: "60%" /* 16:9 aspect ratio */,
+          paddingTop: "61%",
           background: `url(${imgUrl})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
