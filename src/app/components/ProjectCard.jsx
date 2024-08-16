@@ -2,8 +2,14 @@ import React, { useEffect } from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
-
+const ProjectCard = ({
+  imgUrl,
+  title,
+  description,
+  gitUrl,
+  previewUrl,
+  techStack,
+}) => {
   useEffect(() => {
     return () => {
       // Reset state or clear cache here
@@ -45,6 +51,11 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
       <div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6">
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
         <p className="text-[#ADB7BE]">{description}</p>
+        <div className="tech-stack flex flex-wrap">
+          {techStack.map((tech, index) => (
+            <small key={index} className="mr-2 mt-2">{tech}</small>
+          ))}
+        </div>
       </div>
     </div>
   );

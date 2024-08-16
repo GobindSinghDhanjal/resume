@@ -69,6 +69,15 @@ nav {
   margin-top: -80px;
 }
 
+.tech-stack small{
+  padding: 4px 10px;
+  font-size: small;
+  background: #00ddff29;
+  color: #00ddffea;
+  border: none;
+  border-radius: 50px;
+}
+
 @media (max-width: 640px) {
 
   .hero-btn{

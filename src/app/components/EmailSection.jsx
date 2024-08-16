@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import WhatsAppIcon from "../../../public/whatsapp-icon.svg";
+import GmailIcon from "../../../public/gmail-icon.svg";
+import LeetcodeIcon from "../../../public/leetcode-icon.svg";
 import Image from "next/image";
 
 const EmailSection = () => {
@@ -41,7 +43,7 @@ const EmailSection = () => {
   return (
     <section
       id="contact"
-      className="grid md:grid-cols-2 my-12 md:my-12 gap-4 relative"
+      className="grid md:grid-cols-2 my-12 md:my-12 gap-5 relative"
     >
       <div className="blur-design bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
@@ -54,12 +56,18 @@ const EmailSection = () => {
           open. Whether you have a question or just want to say hi, I&apos;ll
           try my best to get back to you!
         </p>
-        <div className="socials mb-5 flex flex-row gap-2">
+        <div className="socials mb-5 flex flex-row gap-4">
           <a href="https://github.com/GobindSinghDhanjal">
-            <Image style={{marginRight:12}} src={GithubIcon} alt="Github Icon" />
+            <Image src={GithubIcon} alt="Github Icon" />
           </a>
           <a href="https://wa.me/9953929943">
             <Image src={WhatsAppIcon} alt="whatsapp" />
+          </a>
+          <a href="mailto:gobindsinghdhanjal1@gmail.com">
+            <Image src={GmailIcon} alt="gmail" />
+          </a>
+          <a href="https://leetcode.com/u/gobindsinghdhanjal">
+            <Image src={LeetcodeIcon} alt="leetcode" />
           </a>
         </div>
       </div>
