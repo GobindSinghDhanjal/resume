@@ -7,53 +7,78 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "MegaCart",
-    description: "Your go-to electronics eCommerce site for a vast selection of gadgets and tech essentials.",
-    image: "/images/projects/7.png",
+    title: "MedCare",
+    description:
+      "A full-stack doctor appointment booking platform with secure login, admin approval workflow, and automated email notifications.",
+    image: "/images/projects/MEDCARE.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/GobindSinghDhanjal/megacart3",
-    previewUrl: "https://megacart.pythonanywhere.com/",
-    techStack:["HTML","CSS","JavaScript","Django"]
+    gitUrl: "https://github.com/gobinddhanjal12/medcare-app-backend",
+    previewUrl: "https://medcare-gobind.vercel.app/",
+    techStack: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "NextJs",
+      "ExpressJs",
+      "PostgreSQL",
+    ],
   },
   {
     id: 2,
     title: "RateYourProfessor",
-    description: "Share anonymous reviews and ratings of professors to help peers choose their courses.",
+    description:
+      "Share anonymous reviews and ratings of professors to help peers choose their courses.",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/GobindSinghDhanjal/ryp-frontend",
     previewUrl: "https://www.rateyourprofessor.in/",
-    techStack:["HTML","CSS","JavaScript","NextJs","MongoDB","ExpressJs"]
+    techStack: ["HTML", "CSS", "JavaScript", "NextJs", "MongoDB", "ExpressJs"],
   },
   {
     id: 3,
+    title: "MegaCart",
+    description:
+      "Your go-to electronics eCommerce site for a vast selection of gadgets and tech essentials.",
+    image: "/images/projects/7.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/GobindSinghDhanjal/megacart3",
+    previewUrl: "https://megacart.pythonanywhere.com/",
+    techStack: ["HTML", "CSS", "JavaScript", "Django"],
+  },
+
+  {
+    id: 4,
     title: "My Notes",
-    description: "Effortlessly manage notes with My Notes. Create, delete and edit your thoughts with ease.",
+    description:
+      "Effortlessly manage notes with My Notes. Create, delete and edit your thoughts with ease.",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/GobindSinghDhanjal/notes",
     previewUrl: "https://notes-six-taupe.vercel.app/",
-    techStack:["HTML","CSS","JavaScript","NextJs"]
+    techStack: ["HTML", "CSS", "JavaScript", "NextJs"],
   },
   {
-    id: 4,
+    id: 5,
     title: "LocDog",
-    description: "Find your furry friend with locdog. A simple, one-page site to locate your dog, built with HTML & CSS.",
+    description:
+      "Find your furry friend with locdog. A simple, one-page site to locate your dog, built with HTML & CSS.",
     image: "/images/projects/4.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/GobindSinghDhanjal/locdog",
     previewUrl: "https://gobindsinghdhanjal.github.io/locdog/",
-    techStack:["HTML","CSS"]
-  },{
-    id: 5,
+    techStack: ["HTML", "CSS"],
+  },
+  {
+    id: 6,
     title: "Calculator",
-    description: "Effortless calculations with our Next.js calculator. Fast, accurate, and user-friendly.",
+    description:
+      "Effortless calculations with our Next.js calculator. Fast, accurate, and user-friendly.",
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/GobindSinghDhanjal/calculator-light",
     previewUrl: "https://magenta-sherbet-e89a1c.netlify.app/",
-    techStack:["HTML","CSS","ReactJs"]
-  }
+    techStack: ["HTML", "CSS", "ReactJs"],
+  },
 ];
 
 const ProjectsSection = () => {
