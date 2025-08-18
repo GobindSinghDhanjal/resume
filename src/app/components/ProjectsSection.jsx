@@ -30,7 +30,7 @@ const projectsData = [
       "Share anonymous reviews and ratings of professors to help peers choose their courses.",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/GobindSinghDhanjal/ryp-frontend",
+    gitUrl: "https://github.com/GobindSinghDhanjal/rate-your-professor",
     previewUrl: "https://www.rateyourprofessor.in/",
     techStack: ["HTML", "CSS", "JavaScript", "NextJs", "MongoDB", "ExpressJs"],
   },
