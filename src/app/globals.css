@@ -26,7 +26,38 @@ body {
     )
     rgb(var(--background-start-rgb)); */
 }
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
 
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 120, 120, 0.4);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 120, 120, 0.6);
+}
+
+/* Completely hide scrollbar arrows */
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-button:single-button,
+::-webkit-scrollbar-button:double-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(120, 120, 120, 0.4) transparent;
+}
 .custom-container {
   padding: 20px 50px;
 }
@@ -60,16 +91,19 @@ nav {
   margin: 35px auto;
 }
 
-.email input, textarea{
-  background: transparent !important; 
+.email input,
+textarea {
+  background: transparent !important;
 }
 
-#about,#projects,#contact{
+#about,
+#projects,
+#contact {
   padding-top: 80px;
   margin-top: -80px;
 }
 
-.tech-stack small{
+.tech-stack small {
   padding: 4px 10px;
   font-size: small;
   background: #00ddff29;
@@ -79,8 +113,7 @@ nav {
 }
 
 @media (max-width: 640px) {
-
-  .hero-btn{
+  .hero-btn {
     width: 250px;
     margin: auto;
     display: block;
@@ -99,7 +132,7 @@ nav {
   .divider {
     margin-top: 80px;
   }
-  .project-divider{
+  .project-divider {
     margin-top: 10px !important;
     margin-bottom: 40px !important;
   }

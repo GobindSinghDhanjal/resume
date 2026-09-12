@@ -14,14 +14,7 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "https://github.com/gobinddhanjal12/medcare-app-backend",
     previewUrl: "https://medcare-gobind.vercel.app/",
-    techStack: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "NextJs",
-      "ExpressJs",
-      "PostgreSQL",
-    ],
+    techStack: ["NextJs", "JavaScript", "ExpressJs", "PostgreSQL"],
   },
   {
     id: 2,
@@ -32,7 +25,25 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "https://github.com/GobindSinghDhanjal/rate-your-professor",
     previewUrl: "https://www.rateyourprofessor.in/",
-    techStack: ["HTML", "CSS", "JavaScript", "NextJs", "MongoDB", "ExpressJs"],
+    techStack: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "NextJs",
+      "MongoDB",
+      "ExpressJs",
+    ],
+  },
+  {
+    id: 10,
+    title: "3D Earth",
+    description:
+      "An interactive 3D Earth experience built with Next.js and Three.js, featuring immersive WebGL visuals, smooth animations, and a responsive modern interface.",
+    image: "/images/projects/EARTH.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/gobinddhanjal12/earth",
+    previewUrl: "https://earth-gobind.vercel.app/",
+    techStack: ["NextJs", "TypeScript", "Three.js", "Tailwind CSS"],
   },
   {
     id: 3,
@@ -43,7 +54,7 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "https://github.com/GobindSinghDhanjal/megacart3",
     previewUrl: "https://megacart.pythonanywhere.com/",
-    techStack: ["HTML", "CSS", "JavaScript", "Django"],
+    techStack: ["HTML", "CSS", "JavaScript", "Django", "Python"],
   },
 
   {
@@ -91,7 +102,7 @@ const ProjectsSection = () => {
   };
 
   const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
+    project.tag.includes(tag),
   );
 
   const cardVariants = {
