@@ -112,6 +112,102 @@ textarea {
   border-radius: 50px;
 }
 
+.hero-art {
+  box-shadow: 0 0 70px rgba(168, 85, 247, 0.12);
+}
+
+.hero-art-glow {
+  position: absolute;
+  inset: -12%;
+  z-index: -1;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.08) 42%, transparent 70%);
+  filter: blur(18px);
+  animation: hero-glow 7s ease-in-out infinite alternate;
+}
+
+.hero-art-orbit {
+  position: absolute;
+  inset: 7%;
+  border: 1px solid rgba(216, 180, 254, 0.2);
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+.hero-art-orbit-one {
+  transform: rotate(-28deg) scaleY(0.43);
+  animation: hero-orbit 18s linear infinite;
+}
+
+.hero-art-orbit-two {
+  inset: 14%;
+  border-color: rgba(244, 114, 182, 0.18);
+  transform: rotate(35deg) scaleY(0.62);
+  animation: hero-orbit 24s linear infinite reverse;
+}
+
+.hero-art-portrait {
+  position: absolute;
+  inset: 0;
+  animation: hero-float 5s ease-in-out infinite;
+}
+
+.hero-art-spark {
+  position: absolute;
+  z-index: 2;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: #e9d5ff;
+  box-shadow: 0 0 14px 3px rgba(216, 180, 254, 0.75);
+  pointer-events: none;
+}
+
+.hero-art-spark-one {
+  top: 16%;
+  right: 17%;
+  animation: hero-twinkle 2.8s ease-in-out infinite;
+}
+
+.hero-art-spark-two {
+  bottom: 19%;
+  left: 12%;
+  width: 5px;
+  height: 5px;
+  animation: hero-twinkle 3.6s ease-in-out 0.7s infinite;
+}
+
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes hero-orbit {
+  to { rotate: 360deg; }
+}
+
+@keyframes hero-glow {
+  from { opacity: 0.65; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1.04); }
+}
+
+@keyframes hero-twinkle {
+  0%, 100% { opacity: 0.45; scale: 0.8; }
+  50% { opacity: 1; scale: 1.15; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-art-glow,
+  .hero-art-orbit-one,
+  .hero-art-orbit-two,
+  .hero-art-portrait,
+  .hero-art-spark-one,
+  .hero-art-spark-two {
+    animation: none;
+  }
+
+}
+
 @media (max-width: 640px) {
   .hero-btn {
     width: 250px;

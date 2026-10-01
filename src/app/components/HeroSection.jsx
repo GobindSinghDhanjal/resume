@@ -55,14 +55,22 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
-            <Image
-              src="/images/hero-image.png"
-              alt="hero image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={300}
-              height={300}
-            />
+          <div className="hero-art rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative isolate">
+            <div className="hero-art-glow" aria-hidden="true" />
+            <div className="hero-art-orbit hero-art-orbit-one" aria-hidden="true" />
+            <div className="hero-art-orbit hero-art-orbit-two" aria-hidden="true" />
+            <span className="hero-art-spark hero-art-spark-one" aria-hidden="true" />
+            <span className="hero-art-spark hero-art-spark-two" aria-hidden="true" />
+            <div className="hero-art-portrait">
+              <Image
+                src="/images/hero-image.png"
+                alt="Portrait of Gobind Singh"
+                className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                width={300}
+                height={300}
+                priority
+              />
+            </div>
           </div>
         </motion.div>
       </div>

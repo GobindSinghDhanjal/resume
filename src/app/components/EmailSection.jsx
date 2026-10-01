@@ -3,40 +3,51 @@ import React, { useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import WhatsAppIcon from "../../../public/whatsapp-icon.svg";
 import GmailIcon from "../../../public/gmail-icon.svg";
+import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import LeetcodeIcon from "../../../public/leetcode-icon.svg";
 import Image from "next/image";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-    };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
+    setLoading(true);
+    try {
+      const data = {
+        email: e.target.email.value,
+        subject: e.target.subject.value,
+        message: e.target.message.value,
+      };
+      const JSONdata = JSON.stringify(data);
+      const endpoint = "/api/send";
 
-    // Form the request for sending data to the server.
-    const options = {
-      // The method is POST because we are sending data.
-      method: "POST",
-      // Tell the server we're sending JSON.
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // Body of the request is the JSON data we created above.
-      body: JSONdata,
-    };
+      // Form the request for sending data to the server.
+      const options = {
+        // The method is POST because we are sending data.
+        method: "POST",
+        // Tell the server we're sending JSON.
+        headers: {
+          "Content-Type": "application/json",
+        },
+        // Body of the request is the JSON data we created above.
+        body: JSONdata,
+      };
 
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
+      const response = await fetch(endpoint, options);
+      const resData = await response.json();
 
-    if (response.status === 200) {
-      // console.log("Message sent.");
-      setEmailSubmitted(true);
+      if (response.ok) {
+        setEmailSubmitted(true);
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("An error occurred while sending the message. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -45,7 +56,7 @@ const EmailSection = () => {
       id="contact"
       className="grid md:grid-cols-2 my-12 md:my-12 gap-5 relative"
     >
-      <div className="blur-design bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
+      <div className="blur-design bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-2xl absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
         <h5 className="text-xl font-bold text-white my-2">
           Let&apos;s Connect
@@ -57,6 +68,9 @@ const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials mb-5 flex flex-row gap-4">
+          <a href="https://www.linkedin.com/in/gobind-singh-dhanjal">
+            <Image src={LinkedinIcon} alt="Linkedin Icon" />
+          </a>
           <a href="https://github.com/GobindSinghDhanjal">
             <Image src={GithubIcon} alt="Github Icon" />
           </a>
@@ -127,9 +141,11 @@ const EmailSection = () => {
             </div>
             <button
               type="submit"
+              disabled={loading}
+              style={{ cursor: loading ? "not-allowed" : "pointer" }}
               className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
         )}

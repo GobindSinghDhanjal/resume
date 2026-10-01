@@ -5,6 +5,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
 import AchievementsSection from "./components/AchievementsSection";
+import Experience from "./components/Experience/Experience";
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
         <hr className="divider" />
         {/* <AchievementsSection /> */}
         <AboutSection />
+        <hr className="project-divider divider" />
+        <Experience />
         <hr className="project-divider divider" />
         <ProjectsSection />
         <br />
